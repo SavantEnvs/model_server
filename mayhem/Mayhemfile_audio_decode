@@ -1,0 +1,10 @@
+project: savantenvs/model_server
+target: audio_decode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/audio_decode/testsuite
+
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_audio
+    libfuzzer: true
+    timeout: 5

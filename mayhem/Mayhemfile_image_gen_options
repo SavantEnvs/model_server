@@ -1,0 +1,10 @@
+project: savantenvs/model_server
+target: image_gen_options
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/image_gen_options/testsuite
+
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_image_gen_options
+    libfuzzer: true
+    timeout: 5

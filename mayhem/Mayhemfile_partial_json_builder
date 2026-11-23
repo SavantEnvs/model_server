@@ -1,0 +1,10 @@
+project: savantenvs/model_server
+target: partial_json_builder
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/partial_json_builder/testsuite
+
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_partial_json
+    libfuzzer: true
+    timeout: 5

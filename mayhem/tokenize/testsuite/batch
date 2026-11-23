@@ -1,0 +1,1 @@
+{"model": "m", "text": ["a", "b c"], "max_length": 8, "pad_to_max_length": true, "padding_side": "left"}
